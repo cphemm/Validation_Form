@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form with Validation</title>
+<link href="css/validate_style.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+	<header>
+      Form with Validation
+  </header>
+	<div class="content">
+	<div class="main">
+	<h1>Create Your Account</h1>
+		<form action="process.html" method="post" name="signup" id="signup">
+			<div>
+				<label for="name" class="label">Name </label>
+				<input name="name" type="text" class="required" id="name" title="Please type your name.">
+			</div>
+			<div>
+				<label for="email" class="label">E-mail Address</label>
+				<input name="email" type="text" id="email">
+			</div>
+			<div>
+				<label for="password" class="label">Password</label>
+				<input name="password" type="password" id="password">
+			</div>
+			<div>
+				<label for="confirm_password" class="label">Confirm Password</label>
+				<input name="confirm_password" type="password" id="confirm_password">
+			</div>
+			<div><span class="label">Languages</span>
+				<input name="languages" type="checkbox" id="JavaScript" value="javascript" class="required" title="Please check at least 1 language.">
+				<label for="javascript">JavaScript</label>
+				<input name="languages" type="checkbox" id="C++" value="C++">
+				<label for="C++">C++</label>
+				<input name="languages" type="checkbox" id="python" value="python">
+				<label for="python">Python</label>
+			</div>
+			<div>
+				<label for="dob" class="label">Date of birth</label>
+				<input name="dob" type="text" id="dob" class="date" title="Please type your date of birth using this format: 01/19/2000">
+			</div>
+			<div>
+				<label for="place" class="label">Place of Birth</label>
+				<select name="place" id="place" class="required" title="Please choose a location.">
+					<option value="">--Please select one--</option>
+					<option value="new york">New York</option>
+					<option value="california">California</option>
+					<option value="texas">Texas</option>
+					<option value="alaska">Alaska</option>
+				</select>
+			</div>
+			<div>
+				<label for="comments" class="label">Comments</label>
+				<textarea name="comments" cols="15" rows="5" id="comments"></textarea>
+			</div>
+			<div class="labelBlock">Would you like to receive our weekly newsletter? </div>
+			<div class="indent">
+				<input  type="radio" name="spam" id="yes" value="yes" class="required" title="Please select an option">
+				<label for="yes">Yes</label>
+				<input type="radio" name="spam" id="no_thanks" value="no_thanks">
+				<label for="no_thanks">No Thanks</label>
+				<input type="radio" name="spam" id="choice" value="choice">
+				<label for="choice">Ask Later</label>
+			</div>
+			<div>
+				<input type="submit" name="submit" id="submit" value="Submit">
+			</div>
+		</form>
+		</div>
+	</div>
+  <!--<footer>-->
+    <!--<p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>-->
+  <!--</footer>-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="jquery_validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+</body>
+</html>
